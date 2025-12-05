@@ -17,8 +17,8 @@ To test:
 - Build your project
 - Go to the root of your Gladio Mori installation.
 - Create Folder "Mods"
-- Inside i create a subfolder for your mod "my mod"
-- Copy your dll and 0harmony.dll there from bin
+- Inside it create a subfolder for your mod "my mod"
+- Copy your dll and 0harmony.dll to "Mods\my mod" from bin
 - Start Gladio Mori
 
 If everything went right, your mod should be working.
