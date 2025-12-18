@@ -15,8 +15,8 @@ namespace HelloGladios
     {
         public void Initialize()
         {
-            var harmony = new Harmony("com.example.HelloGladio");
-            harmony.PatchAll();
+            
+            Harmony.CreateAndPatchAll(typeof(Patch));
 
             UnityEngine.Debug.Log("Hello mod loaded");
 

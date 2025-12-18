@@ -3,13 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\References\0Harmony.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="HarmonyX" Version="2.16.0">
+      <IncludeAssets>compile</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -28,4 +31,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DependencyExample\gm.modcfg">
+      <Link>gm.modcfg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

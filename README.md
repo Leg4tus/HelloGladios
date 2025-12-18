@@ -11,20 +11,22 @@ UnityEngine
 UnityEngine.CoreModule
 UnityEngine.UI
 
-0harmony.dll you need to download separately from the harmony github or add the nuget package.
 
-To test:
+
+## To test locally:
 - Build your project
+- Download the harmony mod zip manually from: https://mod.io/g/gladio-mori/m/harmonyxpack#description
 - Go to the root of your Gladio Mori installation.
 - Create Folder "Mods"
-- Inside it create a subfolder for your mod "my mod"
-- Copy your dll and 0harmony.dll to "Mods\my mod" from bin
+- Create subfolder for the harmony mod and unzip the contents there. Make sure the harmony mod is alphabetically before your mod. Name the subfolder: "Mods\0HarmonyX"
+- Create another subfolder inside the "Mods" folder for your mod "MyMod"
+- Copy your dll to "Mods\MyMod" from bin
 - Start Gladio Mori
 
 If everything went right, your mod should be working.
 
-# Uploading content to mod.io:
-- Add your files to a zip with no subfolders
+## Uploading content to mod.io:
+- Add your files to a zip with no subfolders. Include the gm.modcfg file inside your zip. It makes sure the harmony mod is loaded before yours.
 - Create the mod in mod.io
 - Select relevant tags:
 - Moveset:
@@ -39,8 +41,9 @@ If everything went right, your mod should be working.
   - Should contain a asset bundle called "maps". These are automatically loaded by clients when joining a server.
 - Equipment:
   - Should contain a asset bundle called "equipment". These are automatically loaded by clients when joining a server.
- 
-# The mod load order is:
+- IMPORTANT: add HarmonyXPack as a dependency to your mod
+
+## The mod load order is:
 - Load modio subscribed maps
 - Load modio subscribed equipment
 - Load all mods from local mods folder in alphabetical order
