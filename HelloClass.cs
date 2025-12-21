@@ -15,8 +15,8 @@ namespace HelloGladios
     {
         public void Initialize()
         {
-            
-            Harmony.CreateAndPatchAll(typeof(Patch));
+
+            Harmony.CreateAndPatchAll(typeof(HarmonyPatches));
 
             UnityEngine.Debug.Log("Hello mod loaded");
 
@@ -30,12 +30,16 @@ namespace HelloGladios
         {
             GeneralManager.CreateConfirmDialog("This gets annoying fast", "Hello Gladios!", true);
         }
-    }
 
-    [HarmonyPatch(typeof(GeneralManager), nameof(GeneralManager.CreateConfirmDialog))]
-    class Patch
+    }
+    
+
+    [HarmonyPatch]
+    public static class HarmonyPatches
     {
-        static void Postfix(ref BasicConfirmDialog __result)
+
+        [HarmonyPostfix, HarmonyPatch(typeof(GeneralManager), "CreateConfirmDialog")]
+        private static void AddToHellos(ref BasicConfirmDialog __result)
         {
             if (__result != null)
             {

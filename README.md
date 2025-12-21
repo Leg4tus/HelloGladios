@@ -19,7 +19,6 @@ Following assemblies are found inside your Gladio Mori installation in "Gladio M
 - Go to the root of your Gladio Mori installation.
 - Create Folder "Mods"
 - Create subfolder for the harmony mod and unzip the contents there. Make sure the harmony mod is alphabetically before your mod. Name the subfolder: "Mods\0HarmonyX"
-  - (alphabetical mod loading for local mods currently has a bug. It very likely works on windows machines, but others may have issues.) 
 - Create another subfolder inside the "Mods" folder for your mod "MyMod"
 - Copy your dll to "Mods\MyMod" from bin
 - Start Gladio Mori
