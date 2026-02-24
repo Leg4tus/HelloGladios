@@ -48,7 +48,7 @@ If everything went right, your mod should be working.
 ## To send messages between clients and server:
 - Define a struct that implements IMultiplayerModMessage
 - Make sure the GetMessageID returns a random value that is unique to your message and mod
-  -If the value conflicts with another, there will be errors if both mods are used at the same time
+  - If the value conflicts with another, there will be errors if both mods are used at the same time
 - Register a function to receive your message using MultiplayerModMessageManager.RegisterServerMessageHandler or MultiplayerModMessageManager.RegisterClientMessageHandler
 - Your registered function will receive a byte array that you can then deserialize using MultiplayerModMessageManager.Deserialize()
 
