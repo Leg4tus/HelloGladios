@@ -10,6 +10,8 @@ Following assemblies are found inside your Gladio Mori installation in "Gladio M
 - UnityEngine
 - UnityEngine.CoreModule
 - UnityEngine.UI
+- Mirror
+- UnityEngine.InputLegacyModule
 
 
 
@@ -42,6 +44,13 @@ If everything went right, your mod should be working.
 - Equipment:
   - Should contain a asset bundle called "equipment". These are automatically loaded by clients when joining a server.
 - IMPORTANT: add HarmonyXPack as a dependency to your mod
+
+## To send messages between clients and server:
+- Define a struct that implements IMultiplayerModMessage
+- Make sure the GetMessageID returns a random value that is unique to your message and mod
+  -If the value conflicts with another, there will be errors if both mods are used at the same time
+- Register a function to receive your message using MultiplayerModMessageManager.RegisterServerMessageHandler or MultiplayerModMessageManager.RegisterClientMessageHandler
+- Your registered function will receive a byte array that you can then deserialize using MultiplayerModMessageManager.Deserialize()
 
 ## The mod load order is:
 - Load modio subscribed maps

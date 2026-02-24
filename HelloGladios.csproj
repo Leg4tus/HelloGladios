@@ -17,12 +17,20 @@
       <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\Mirror.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\Builds\GladioMori\dev\Gladio Mori_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
